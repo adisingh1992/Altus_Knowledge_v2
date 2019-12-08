@@ -1,0 +1,34 @@
+<nz-card id="payment-status-card">
+    <ng-container *ngIf="status && status === 'success'">
+        <nz-result nzStatus="success" nzTitle="Payment Successful" nzSubTitle="Transaction Id: {{ txnid }}">
+            <div nz-result-extra>
+                <p>
+                    Thank you for choosing Altus Knowledge,
+                    Someone from our team will contact you soon!
+                    <br />
+                    Meanwhile please note down your transaction id, this will be your payment reference for future.
+                </p>
+                <button nz-button nzType="primary" routerLink="/home">Home Page</button>
+                <button nz-button routerLink="/contact">Contact Us</button>
+            </div>
+        </nz-result>
+    </ng-container>
+
+    <ng-container *ngIf="status && status !== 'success'">
+        <nz-result nzStatus="error" nzTitle="Payment Failed" nzSubTitle="Transaction Id: {{ txnid }}">
+            <div nz-result-extra>
+                <p>
+                    Your payment failed because of some unexpected reasons!
+                </p>
+                <p>
+                    You can contact our team if the amount got deducted from your account,
+                    we will try to refund it as soon as possible.
+                    <br />
+                    Also please don't forgot to note down your transaction id.
+                </p>
+                <button nz-button nzType="primary" routerLink="/home">Home Page</button>
+                <button nz-button routerLink="/contact">Contact Us</button>
+            </div>
+        </nz-result>
+    </ng-container>
+</nz-card>

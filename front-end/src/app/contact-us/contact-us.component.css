@@ -1,0 +1,16 @@
+#contact-us-banner {
+	width: 80%;
+	margin: 2% auto 2% auto;
+}
+
+#contact-us-banner > img {
+	border-radius: 10px;
+}
+
+#contact-us-quote {
+	font-size: large;
+}
+
+button {
+	margin-left: 8px;
+}

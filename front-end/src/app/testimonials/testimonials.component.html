@@ -1,0 +1,95 @@
+<nz-card>
+    <nz-card class="testimony">
+        <app-comment name="HEERAJ" avatar="/assets/images/students/heeraj.jpg" rank="AIR – 23rd, IIT Advanced">
+            I would like to thank Altus Knowledge for the learning techniques & guidance in my journey to be an IITian.
+            I would recommend them to any student looking for highly skilled teachers, strong support, and powerful
+            results.
+        </app-comment>
+    </nz-card>
+
+    <br />
+
+    <nz-card class="testimony">
+        <app-comment name="SOUMITH" avatar="/assets/images/students/soumith.png" rank="AIR – 59th, IIT MAINS">
+            What I appreciate most about Altus Knowledge is that they made it so easy to crack IIT against common
+            belief. It is actually not as tough as Ithought. With the right guidance, motivation along with the right
+            attitude and practice, it is achievable for any aspiring student.
+        </app-comment>
+    </nz-card>
+
+    <br />
+
+    <nz-card class="testimony">
+        <app-comment name="NANDINI VASUKI G" avatar="/assets/images/students/Nandini.png" rank="AIR – 2nd, KVPY">
+            A very interesting and valuable experience.I learned a lot and it gave me a good grounding in the
+            basics.They made my dream come true.I found the course interesting, challenging, and rewarding.
+        </app-comment>
+    </nz-card>
+
+    <br />
+
+    <nz-card class="testimony">
+        <app-comment name="SHREYA" avatar="/assets/images/students/Shreya.jpg" rank="India Topper, CALTECH">
+            It was a great time I spent in Altus Knowledge. Altus has very wonderful faculty and they are very
+            cooperative and Institute environment is very positive. Altus has made the best efforts to provide all the
+            facilities for the students like Faculties, Support, etc. I personally learned a lot at Altus.
+        </app-comment>
+    </nz-card>
+
+    <br />
+
+    <nz-card class="testimony">
+        <app-comment name="KUSH" avatar="/assets/images/students/Kush.png" rank="AIR – 22nd, NEET">
+            I have taken classroom coaching from Altus Knowledge. I have no hesitation in recommending them for their
+            expertise, accuracy, and efficiency. They made my dream come true.
+        </app-comment>
+    </nz-card>
+
+    <br />
+
+    <nz-card class="testimony">
+        <app-comment name="VARUN" avatar="/assets/images/students/varun.png" rank="India Topper, UCSD">
+            Altus Knowledge has really been a launch pad for my ambitions. It took care of all examinations that are
+            important and provided adequate guidelines. Spending two years in Altus Knowledge has been one of the best
+            learning experiences for me. The faculty was kind enough to clear all the doubts and make the concepts
+            crystal clear. I love the fact that I was associated with Altus Knowledge for two years and would recommend
+            it to my friends and relatives for their preparations for engineering.
+        </app-comment>
+    </nz-card>
+
+    <br />
+
+    <nz-divider></nz-divider>
+
+    <div class="exam-heading">
+        <h2>Altus Knowledge</h2>
+        <strong>Students Who Got More Than 250 In IIT Exam</strong>
+    </div>
+
+    <nz-divider></nz-divider>
+
+    <div nz-row [nzGutter]="8">
+        <div nz-col [nzSpan]="8" *ngFor="let student of iitStudents; let i = index;">
+            <div class="students-container">
+                <img src="/assets/images/students/iit/ {{i+1}}.png" alt="student" class="students" />
+            </div>
+        </div>
+    </div>
+
+    <nz-divider></nz-divider>
+
+    <div class="exam-heading">
+        <h2>Altus Knowledge</h2>
+        <strong>Students Who Got More Than 600 In NEET Exam</strong>
+    </div>
+
+    <nz-divider></nz-divider>
+
+    <div nz-row [nzGutter]="8">
+        <div nz-col [nzSpan]="8" *ngFor="let student of neetStudents; let i = index;">
+            <div class="students-container">
+                <img src="/assets/images/students/neet/ {{i+1}}.png" alt="student" class="students" />
+            </div>
+        </div>
+    </div>
+</nz-card>

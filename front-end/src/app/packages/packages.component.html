@@ -1,0 +1,31 @@
+<nz-card>
+    <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }" *ngIf="!loading">
+        <div nz-col nzSpan="6" *ngFor="let package of packages; let i = index;">
+            <nz-card nzHoverable [nzCover]="coverTemplate" class="package-card" [nzActions]="[payNow]">
+                <nz-card-meta [nzTitle]="package?.data?.name" [nzDescription]="description">
+                </nz-card-meta>
+            </nz-card>
+            <ng-template #coverTemplate>
+                <img alt="package" src="/assets/images/packages/ {{i}}.png" class="package-image" />
+            </ng-template>
+
+            <ng-template #description>
+                <span nz-text nzType="warning">
+                    &#8377; {{package?.data?.price}}
+                </span>
+            </ng-template>
+
+            <ng-template #payNow>
+                <strong (click)="showPaymentForm(package)" class="clickable">Pay Now</strong>
+            </ng-template>
+        </div>
+    </div>
+
+    <span *ngIf="loading">
+        <nz-card [nzLoading]="true"></nz-card>
+        <nz-divider></nz-divider>
+        <nz-card [nzLoading]="true"></nz-card>
+        <nz-divider></nz-divider>
+        <nz-card [nzLoading]="true"></nz-card>
+    </span>
+</nz-card>

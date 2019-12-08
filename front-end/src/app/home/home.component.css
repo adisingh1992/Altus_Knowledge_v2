@@ -1,0 +1,11 @@
+#carousel {
+	height: 700px;
+}
+
+[nz-carousel-content] {
+	height: 700px;
+}
+
+#feature-title {
+	text-align: center;
+}

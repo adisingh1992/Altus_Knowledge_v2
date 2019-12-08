@@ -1,0 +1,20 @@
+.testimony {
+	width: 80%;
+	margin: auto;
+}
+
+.exam-heading {
+	text-align: center;
+}
+
+.students-container {
+	width: fit-content;
+	margin: auto;
+	margin-bottom: 10%;
+}
+
+.students {
+	width: 150px;
+	height: 150px;
+	border-radius: 5%;
+}

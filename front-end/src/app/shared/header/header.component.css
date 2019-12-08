@@ -1,0 +1,10 @@
+#logo-container {
+	padding: 2%;
+	background-image: url('/assets/images/altus-lions.png');
+	background-repeat: no-repeat;
+	background-size: 400px 150px;
+}
+
+[nz-menu] {
+	line-height: 64px;
+}

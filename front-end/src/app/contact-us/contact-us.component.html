@@ -1,0 +1,97 @@
+<nz-card>
+    <div id="contact-us-banner">
+        <img src="/assets/images/contact-us.png" alt="contact-us" />
+    </div>
+
+    <nz-divider></nz-divider>
+
+    <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }">
+        <div nz-col nzSpan="12">
+
+            <nz-card>
+                <nz-card nzTitle="Book Now">
+                    <form nz-form [formGroup]="contactForm" (ngSubmit)="submitForm(contactForm.value)">
+                        <nz-form-item>
+                            <nz-form-label [nzSpan]="4" nzRequired>Name</nz-form-label>
+                            <nz-form-control [nzSpan]="20">
+                                <input placeholder="Enter Your Name" nz-input type="text" formControlName="name">
+                            </nz-form-control>
+                        </nz-form-item>
+
+                        <nz-form-item>
+                            <nz-form-label [nzSpan]="4" nzRequired>E-Mail</nz-form-label>
+                            <nz-form-control [nzSpan]="20">
+                                <input placeholder="Enter Your E-mail" nz-input type="email" formControlName="email">
+                            </nz-form-control>
+                        </nz-form-item>
+
+                        <nz-form-item>
+                            <nz-form-label [nzSpan]="4" nzRequired>Contact</nz-form-label>
+                            <nz-form-control [nzSpan]="20">
+                                <input placeholder="Enter You Contact" nz-input type="tel" formControlName="contact">
+                            </nz-form-control>
+                        </nz-form-item>
+
+                        <nz-form-item>
+                            <nz-form-label [nzSpan]="4" nzRequired>Message</nz-form-label>
+                            <nz-form-control [nzSpan]="20">
+                                <input placeholder="Enter Your Message" nz-input type="text" formControlName="message">
+                            </nz-form-control>
+                        </nz-form-item>
+
+                        <nz-form-item>
+                            <nz-form-control [nzOffset]="14" [nzSpan]="10">
+                                <button nz-button nzType="primary" [disabled]="!contactForm.valid">Submit</button>
+                                <button nz-button (click)="resetForm($event)">Reset</button>
+                            </nz-form-control>
+                        </nz-form-item>
+                    </form>
+                </nz-card>
+            </nz-card>
+
+        </div>
+
+        <div nz-col nzSpan="12">
+            <nz-card nzTitle="Contact Us">
+                <span nz-text nzType="warning" id="contact-us-quote">
+                    Altus Knowledge: Success Begins Today
+                </span>
+
+                <nz-divider></nz-divider>
+
+                <h3>Bengaluru Office</h3>
+                <strong>Address 1:</strong>
+                <p>
+                    No. #1008, Ideal homes Township, Jayanna circle, Rajarajeshwari nagar, Bengaluru, Karnataka 560098
+                </p>
+
+                <strong>Address 2:</strong>
+                <p>
+                    No. 28, 52/3, Doresanipalya, Bannerghatta Road, Bangalore 560 076
+                </p>
+
+                <strong>Address 3:</strong>
+                <p>
+                    Sai Krishna Arcade, Sector 2, HSR Layout, Bangalore- 560102
+                </p>
+
+                <h3>Lucknow Office</h3>
+                <p>
+                    2nd floor, Shukla palace, Sapru Marg Hazratganj Lucknow
+                </p>
+
+                <nz-divider></nz-divider>
+
+                <strong>E-Mail Address:</strong>
+                <p>
+                    altusknowledge@gmail.com
+                </p>
+
+                <strong>Contact Numbers:</strong>
+                <p>
+                    +91-7411376798, +91-8687443994
+                </p>
+            </nz-card>
+        </div>
+    </div>
+</nz-card>

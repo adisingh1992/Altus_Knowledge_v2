@@ -1,0 +1,26 @@
+<div id="logo-container">
+    <img routerLink="/home" src="/assets/images/altus_logo.png" alt="altus_logo" class="clickable" />
+</div>
+
+<nz-header>
+    <ul nz-menu nzTheme="dark" nzMode="horizontal">
+        <li routerLink="/home" nz-menu-item>Home</li>
+        <li routerLink="/about-us" nz-menu-item>About Us</li>
+        <li routerLink="/courses" nz-menu-item>Programs & Courses</li>
+        <li nz-submenu nzTitle="Packages & Pricing">
+            <ul>
+                <li routerLink="/packages/iit" nz-menu-item>IIT</li>
+                <li routerLink="/packages/neet" nz-menu-item>NEET</li>
+                <li (click)="showPaymentForm()" nz-menu-item>QuickPay</li>
+            </ul>
+        </li>
+        <li routerLink="/faq" nz-menu-item>FAQ</li>
+        <li routerLink="/contact" nz-menu-item>Contact Us</li>
+        <li routerLink="/testimonials" nz-menu-item>Testimonials</li>
+        <li nz-menu-item>
+            <a href="https://www.altusknowledge.com" target="_blank" rel="noopener noreferrer">
+                Speed Tests
+            </a>
+        </li>
+    </ul>
+</nz-header>

@@ -1,0 +1,11 @@
+<nz-comment [nzAuthor]="name">
+    <nz-avatar nz-comment-avatar nzIcon="user" [nzSrc]="avatar"></nz-avatar>
+    <nz-comment-content>
+        <p>
+            <ng-content></ng-content>
+        </p>
+    </nz-comment-content>
+    <nz-comment-action>
+        {{ rank }}
+    </nz-comment-action>
+</nz-comment>

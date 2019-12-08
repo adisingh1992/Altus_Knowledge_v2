@@ -1,0 +1,101 @@
+<form nz-form>
+    <div nz-row nzGutter="8">
+        <div nz-col nzSpan="12">
+            <nz-form-item>
+                <nz-form-label>First Name</nz-form-label>
+                <nz-form-control>
+                    <input name="firstName" [(ngModel)]="paymentRequest.firstName" nz-input required
+                        placeholder="Please enter your first name" />
+                </nz-form-control>
+            </nz-form-item>
+        </div>
+        <div nz-col nzSpan="12">
+            <nz-form-item>
+                <nz-form-label>Last Name</nz-form-label>
+                <nz-form-control>
+                    <input name="lastName" [(ngModel)]="paymentRequest.lastName" nz-input required
+                        placeholder="Please enter your last name" />
+                </nz-form-control>
+            </nz-form-item>
+        </div>
+    </div>
+    <div nz-row nzGutter="8">
+        <div nz-col nzSpan="12">
+            <nz-form-item>
+                <nz-form-label>E-mail</nz-form-label>
+                <nz-form-control>
+                    <input name="email" [(ngModel)]="paymentRequest.email" nz-input type="email" required
+                        placeholder="Please enter your email" />
+                </nz-form-control>
+            </nz-form-item>
+        </div>
+        <div nz-col nzSpan="12">
+            <nz-form-item>
+                <nz-form-label>Contact</nz-form-label>
+                <nz-form-control>
+                    <input name="contact" [(ngModel)]="paymentRequest.contact" nz-input required
+                        placeholder="Please enter your contact number" />
+                </nz-form-control>
+            </nz-form-item>
+        </div>
+    </div>
+    <div nz-row nzGutter="8">
+        <div nz-col nzSpan="24">
+            <nz-list nzBordered nzSize="small" [nzHeader]="'Package Description'">
+                <nz-list-item>
+                    <div nz-col nzSpan="4">
+                        <strong>Name: </strong>
+                    </div>
+                    <div nz-col nzSpan="20">
+                        {{ selectedPackage?.data?.name }}
+                    </div>
+                </nz-list-item>
+
+                <nz-list-item>
+                    <div nz-col nzSpan="4">
+                        <strong>Stream: </strong>
+                    </div>
+                    <div nz-col nzSpan="20">
+                        {{ selectedPackage?.data?.stream }}
+                    </div>
+                </nz-list-item>
+
+                <nz-list-item>
+                    <div nz-col nzSpan="4">
+                        <strong>Price: </strong>
+                    </div>
+                    <div nz-col nzSpan="20">
+                        <nz-input-group nzPrefix="₹">
+                            <input name="amount" [(ngModel)]="selectedPackage.data.price" type="number"
+                                [disabled]="selectedPackage?.data?.stream !== 'QUICK_PAY'" nz-input />
+                        </nz-input-group>
+                    </div>
+                </nz-list-item>
+            </nz-list>
+        </div>
+    </div>
+</form>
+
+<nz-divider></nz-divider>
+
+<div id="footer">
+    <button nz-button nzType="primary" (click)="initiatePayment()">Pay Now</button>
+</div>
+
+<!-- PayUBiz Form -->
+
+<form ngNoForm #payUForm [action]='payUBizURL' method='post' id="hidden">
+    <input name="firstname" value="{{ payURequest?.firstname }}" />
+    <input name="surl" value="{{ payURequest?.surl }}" />
+    <input name="phone" value="{{ payURequest?.phone }}" />
+    <input name="key" value="{{ payURequest?.key }}" />
+    <input name="hash" value="{{ payURequest?.hash }}" />
+    <input name="furl" value="{{ payURequest?.furl }}" />
+    <input name="curl" value="{{ payURequest?.curl }}" />
+    <input name="txnid" value="{{ payURequest?.txnid }}" />
+    <input name="productinfo" value="{{ payURequest?.productinfo }}" />
+    <input name="amount" value="{{ payURequest?.amount }}" />
+    <input name="email" value="{{ payURequest?.email }}" />
+</form>
+
+<!-- PayUBiz Form -->

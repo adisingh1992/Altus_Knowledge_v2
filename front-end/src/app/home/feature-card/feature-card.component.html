@@ -1,0 +1,13 @@
+<nz-card nzHoverable [nzCover]="featureImage" nzBordered="false">
+    <div class="feature-card-title">
+        <p>{{ feature?.heading }}</p>
+        <p>{{ feature?.subHeading }}</p>
+    </div>
+    <div class="feature-card-desc">
+        <p>{{ feature?.description }}</p>
+    </div>
+</nz-card>
+
+<ng-template #featureImage>
+    <img alt="featureImage" src="/assets/images/{{feature?.image}}" class="feature-image" />
+</ng-template>

@@ -1,0 +1,13 @@
+.feature-card-title {
+	font-weight: bolder;
+	text-align: center;
+}
+
+.feature-card-desc {
+	text-align: justify;
+}
+
+.feature-image {
+	width: 25%;
+	margin: auto;
+}

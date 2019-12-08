@@ -1,0 +1,19 @@
+<nz-carousel nzAutoPlay id="carousel">
+    <div nz-carousel-content *ngFor="let index of [0,1,2]">
+        <app-carousel-card [data]="carouselData[index]"></app-carousel-card>
+    </div>
+</nz-carousel>
+
+<nz-card [nzTitle]="featureCardTitle">
+    <div nz-row [nzGutter]="8">
+        <div nz-col [nzSpan]="6" *ngFor="let index of [0,1,2,3]">
+            <app-feature-card [feature]="features[index]"></app-feature-card>
+        </div>
+    </div>
+</nz-card>
+
+<ng-template #featureCardTitle>
+    <div id="feature-title">
+        <h3>Our Features</h3>
+    </div>
+</ng-template>
