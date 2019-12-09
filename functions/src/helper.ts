@@ -60,7 +60,7 @@ class Helper {
 
 		const reverseHash: string = sha512(reverseHashString);
 
-		return payUResponse.hash == reverseHash;
+		return payUResponse.hash === reverseHash;
 	}
 
 	updateTransaction(payUResponse: PayUResponse, transaction: Transaction): Transaction {
