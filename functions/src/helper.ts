@@ -67,14 +67,14 @@ class Helper {
 		transaction.mihpayid = payUResponse.mihpayid;
 		transaction.mode = payUResponse.mode;
 		transaction.status = payUResponse.status;
-		transaction.cardCategory = payUResponse.cardCategory;
+		transaction.cardCategory = payUResponse.cardCategory || '';
 		transaction.net_amount_debit = payUResponse.net_amount_debit;
 		transaction.addedon = payUResponse.addedon;
-		transaction.error_Message = payUResponse.error_Message;
+		transaction.error_Message = payUResponse.error_Message || '';
 		transaction.name_on_card = payUResponse.name_on_card;
-		transaction.cardnum = payUResponse.cardnum;
-		transaction.issuing_bank = payUResponse.issuing_bank;
-		transaction.card_type = payUResponse.card_type;
+		transaction.cardnum = payUResponse.cardnum || '';
+		transaction.issuing_bank = payUResponse.issuing_bank || '';
+		transaction.card_type = payUResponse.card_type || '';
 
 		return transaction;
 	}
