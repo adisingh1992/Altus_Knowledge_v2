@@ -9,3 +9,13 @@
 #feature-title {
 	text-align: center;
 }
+
+@media screen and (max-width: 600px) {
+	#carousel {
+		height: 50vh;
+	}
+
+	[nz-carousel-content] {
+		height: 50vh;
+	}
+}

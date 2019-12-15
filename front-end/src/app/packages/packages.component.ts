@@ -44,7 +44,7 @@ export class PackagesComponent implements OnInit {
 				selectedPackage: selectedPackage
 			},
 			nzBodyStyle: { height: 'calc(100% - 55px)', overflow: 'auto', 'padding-bottom': '53px' },
-			nzWidth: 720,
+			nzWidth: window.innerWidth <= 600 ? '100%' : 720,
 			nzMaskClosable: false
 		});
 	}

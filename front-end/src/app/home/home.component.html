@@ -6,7 +6,7 @@
 
 <nz-card [nzTitle]="featureCardTitle">
     <div nz-row [nzGutter]="8">
-        <div nz-col [nzSpan]="6" *ngFor="let index of [0,1,2,3]">
+        <div nz-col nzXs="24" nzSm="24" nzMd="6" nzLg="6" nzXl="6" *ngFor="let index of [0,1,2,3]">
             <app-feature-card [feature]="features[index]"></app-feature-card>
         </div>
     </div>

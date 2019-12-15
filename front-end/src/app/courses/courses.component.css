@@ -25,7 +25,7 @@ li {
 }
 
 #programs {
-	background-image: url('/assets/images/courses-background.jpg');
+	background-image: url('/assets/images/courses-background.png');
 	background-repeat: no-repeat;
 	background-position-x: right;
 	background-size: 50% 150%;
@@ -102,4 +102,45 @@ li {
 	width: 100px;
 	height: 100px;
 	margin-top: 5%;
+}
+
+@media screen and (max-width: 600px) {
+	strong,
+	li {
+		margin: 5%;
+	}
+
+	#quote > span > code {
+		font-size: 12px;
+	}
+
+	#programs {
+		background-image: none;
+		height: auto;
+	}
+
+	#programs > span {
+		font-size: 25px;
+	}
+
+	#programs > strong {
+		font-size: 20px;
+	}
+
+	.flip-card-col {
+		margin-bottom: 16px;
+		font-size: 14px;
+	}
+
+	.flip-card {
+		height: 250px;
+	}
+
+	.flip-card h1 {
+		font-size: 20px;
+	}
+
+	.flip-card-back {
+		font-size: 12px;
+	}
 }

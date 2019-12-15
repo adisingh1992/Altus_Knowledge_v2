@@ -1,6 +1,6 @@
 <nz-card>
     <nz-card class="testimony">
-        <app-comment name="HEERAJ" avatar="/assets/images/students/heeraj.jpg" rank="AIR – 23rd, IIT Advanced">
+        <app-comment name="HEERAJ" avatar="/assets/images/students/heeraj.png" rank="AIR – 23rd, IIT Advanced">
             I would like to thank Altus Knowledge for the learning techniques & guidance in my journey to be an IITian.
             I would recommend them to any student looking for highly skilled teachers, strong support, and powerful
             results.
@@ -29,7 +29,7 @@
     <br />
 
     <nz-card class="testimony">
-        <app-comment name="SHREYA" avatar="/assets/images/students/Shreya.jpg" rank="India Topper, CALTECH">
+        <app-comment name="SHREYA" avatar="/assets/images/students/Shreya.png" rank="India Topper, CALTECH">
             It was a great time I spent in Altus Knowledge. Altus has very wonderful faculty and they are very
             cooperative and Institute environment is very positive. Altus has made the best efforts to provide all the
             facilities for the students like Faculties, Support, etc. I personally learned a lot at Altus.
@@ -69,7 +69,7 @@
     <nz-divider></nz-divider>
 
     <div nz-row [nzGutter]="8">
-        <div nz-col [nzSpan]="8" *ngFor="let student of iitStudents; let i = index;">
+        <div nz-col nzXs="12" nzSm="12" nzMd="8" nzLg="8" nzXl="8" *ngFor="let student of iitStudents; let i = index;">
             <div class="students-container">
                 <img src="/assets/images/students/iit/ {{i+1}}.png" alt="student" class="students" />
             </div>
@@ -86,7 +86,7 @@
     <nz-divider></nz-divider>
 
     <div nz-row [nzGutter]="8">
-        <div nz-col [nzSpan]="8" *ngFor="let student of neetStudents; let i = index;">
+        <div nz-col nzXs="12" nzSm="12" nzMd="8" nzLg="8" nzXl="8" *ngFor="let student of neetStudents; let i = index;">
             <div class="students-container">
                 <img src="/assets/images/students/neet/ {{i+1}}.png" alt="student" class="students" />
             </div>

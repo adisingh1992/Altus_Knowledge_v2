@@ -18,3 +18,13 @@
 	height: 150px;
 	border-radius: 5%;
 }
+
+@media screen and (max-width: 600px) {
+	.students-container {
+		width: 100%;
+	}
+
+	.students {
+		width: 100%;
+	}
+}

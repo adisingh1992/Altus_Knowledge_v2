@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { NzDrawerService } from 'ng-zorro-antd';
 import { Component } from '@angular/core';
 import { Package } from '../models/package';
@@ -9,9 +10,10 @@ import { PaymentFormComponent } from 'src/app/payment/payment-form/payment-form.
 	styleUrls: [ './header.component.css' ]
 })
 export class HeaderComponent {
+	navbarState: string = 'topnav';
 	quickPay: Package;
 
-	constructor(private _drawerService: NzDrawerService) {}
+	constructor(private _drawerService: NzDrawerService, private _router: Router) {}
 
 	initializeQuickPayPackage() {
 		this.quickPay = {} as Package;
@@ -30,8 +32,20 @@ export class HeaderComponent {
 				selectedPackage: { data: this.quickPay, id: this.quickPay.id }
 			},
 			nzBodyStyle: { height: 'calc(100% - 55px)', overflow: 'auto', 'padding-bottom': '53px' },
-			nzWidth: 720,
+			nzWidth: window.innerWidth <= 600 ? '100%' : 720,
 			nzMaskClosable: false
 		});
+	}
+
+	toggleNavbar(event: { preventDefault: () => void }) {
+		event.preventDefault();
+
+		if (this.navbarState === 'topnav') this.navbarState += ' responsive';
+		else this.navbarState = 'topnav';
+	}
+
+	navigate(path: string) {
+		if (this.navbarState === 'topnav responsive') this.navbarState = 'topnav';
+		this._router.navigate([ path ]);
 	}
 }

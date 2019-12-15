@@ -5,6 +5,7 @@
 
 #contact-us-banner > img {
 	border-radius: 10px;
+	width: 100%;
 }
 
 #contact-us-quote {
@@ -13,4 +14,18 @@
 
 button {
 	margin-left: 8px;
+}
+
+@media screen and (max-width: 600px) {
+	#contact-form-col {
+		padding-bottom: 16px;
+	}
+
+	#contact-us-banner img {
+		height: 15vh;
+	}
+
+	#contact-us-quote {
+		font-size: 15px;
+	}
 }

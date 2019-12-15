@@ -1,6 +1,6 @@
 <form nz-form>
     <div nz-row nzGutter="8">
-        <div nz-col nzSpan="12">
+        <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="12" nzXl="12">
             <nz-form-item>
                 <nz-form-label>First Name</nz-form-label>
                 <nz-form-control>
@@ -9,7 +9,7 @@
                 </nz-form-control>
             </nz-form-item>
         </div>
-        <div nz-col nzSpan="12">
+        <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="12" nzXl="12">
             <nz-form-item>
                 <nz-form-label>Last Name</nz-form-label>
                 <nz-form-control>
@@ -20,7 +20,7 @@
         </div>
     </div>
     <div nz-row nzGutter="8">
-        <div nz-col nzSpan="12">
+        <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="12" nzXl="12">
             <nz-form-item>
                 <nz-form-label>E-mail</nz-form-label>
                 <nz-form-control>
@@ -29,7 +29,7 @@
                 </nz-form-control>
             </nz-form-item>
         </div>
-        <div nz-col nzSpan="12">
+        <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="12" nzXl="12">
             <nz-form-item>
                 <nz-form-label>Contact</nz-form-label>
                 <nz-form-control>
@@ -43,28 +43,28 @@
         <div nz-col nzSpan="24">
             <nz-list nzBordered nzSize="small" [nzHeader]="'Package Description'">
                 <nz-list-item>
-                    <div nz-col nzSpan="4">
+                    <div nz-col nzSpan="6">
                         <strong>Name: </strong>
                     </div>
-                    <div nz-col nzSpan="20">
+                    <div nz-col nzSpan="18">
                         {{ selectedPackage?.data?.name }}
                     </div>
                 </nz-list-item>
 
                 <nz-list-item>
-                    <div nz-col nzSpan="4">
+                    <div nz-col nzSpan="6">
                         <strong>Stream: </strong>
                     </div>
-                    <div nz-col nzSpan="20">
+                    <div nz-col nzSpan="18">
                         {{ selectedPackage?.data?.stream }}
                     </div>
                 </nz-list-item>
 
                 <nz-list-item>
-                    <div nz-col nzSpan="4">
+                    <div nz-col nzSpan="6">
                         <strong>Price: </strong>
                     </div>
-                    <div nz-col nzSpan="20">
+                    <div nz-col nzSpan="18">
                         <nz-input-group nzPrefix="₹">
                             <input name="amount" [(ngModel)]="selectedPackage.data.price" type="number"
                                 [disabled]="selectedPackage?.data?.stream !== 'QUICK_PAY'" nz-input />
