@@ -1,3 +1,4 @@
+import { AnalyticsService } from './services/analytics.service';
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router, NavigationEnd } from '@angular/router';
@@ -8,9 +9,11 @@ import { Router, NavigationEnd } from '@angular/router';
 	styleUrls: [ './app.component.css' ]
 })
 export class AppComponent implements OnInit {
-	constructor(private _titleService: Title, private _router: Router) {}
+	constructor(private _titleService: Title, private _router: Router, private _analyticsService: AnalyticsService) {}
 
 	ngOnInit() {
+		this._analyticsService.init();
+
 		this._router.events.subscribe((event) => {
 			if (event instanceof NavigationEnd) {
 				const title = this.getTitle(this._router.routerState, this._router.routerState.root).join('-');

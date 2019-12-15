@@ -5,6 +5,7 @@
 export const environment = {
 	rootUrl: 'https://www.altusknowledge.firebaseapp.com/api/v1',
 	// rootUrl: 'http://localhost:5000/api/v1',
-	payUBizURL: "https://test.payu.in/_payment",
+	payUBizURL: 'https://test.payu.in/_payment',
+	googleAnalyticsKey: 'UA-51026780-6',
 	production: false
 };
