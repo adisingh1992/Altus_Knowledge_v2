@@ -24,6 +24,7 @@ import { LoaderInterceptor } from './interceptors/loader-interceptor';
 import { PackagesComponent } from './packages/packages.component';
 import { PaymentFormComponent } from './payment/payment-form/payment-form.component';
 import { PaymentStatusComponent } from './payment/payment-status/payment-status.component';
+import { ContactDetailsComponent } from './contact-us/contact-details/contact-details.component';
 
 registerLocaleData(en);
 
@@ -43,7 +44,8 @@ registerLocaleData(en);
 		CarouselCardComponent,
 		PackagesComponent,
 		PaymentFormComponent,
-		PaymentStatusComponent
+		PaymentStatusComponent,
+		ContactDetailsComponent
 	],
 	imports: [
 		BrowserModule,

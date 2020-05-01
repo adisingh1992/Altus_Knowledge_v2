@@ -12,9 +12,19 @@ export class MainService {
 
 	constructor(private _http: HttpClient) {}
 
+	fetchAllContactDetails() {
+		const endPoint: string = `${this.rootUrl}/contact-us`;
+		return this._http.get(endPoint);
+	}
+
 	saveContactRequest(contactRequest: ContactRequest) {
 		const endPoint: string = `${this.rootUrl}/contact-us`;
 		return this._http.post(endPoint, JSON.stringify(contactRequest));
+	}
+
+	deleteContact(id: string) {
+		const endPoint: string = `${this.rootUrl}/contact-us/${id}`;
+		return this._http.delete(endPoint);
 	}
 
 	fetchAllPackages(stream: string) {

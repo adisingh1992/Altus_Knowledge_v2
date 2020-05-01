@@ -1,3 +1,4 @@
+import { Mailer } from './mailer';
 import { Transaction } from './models/transactions';
 import { PayUResponse } from './models/payu-response';
 import { PayURequest } from './models/payu.request';
@@ -27,13 +28,31 @@ class MainController {
 		}
 	}
 
+	async deleteContact(req: any, res: any) {
+		try {
+			const id: string = req.params.id;
+
+			await db.collection('contactUs').doc(id).delete();
+
+			res.json({
+				id: id,
+				message: 'Deleted Successfully!'
+			});
+		} catch (exception) {
+			res.status(500).send(exception.message);
+		}
+	}
+
 	async saveContactRequest(req: any, res: any) {
 		try {
 			const { name, email, contact, message } = req.body;
-			const contactData = { name, email, contact, message };
+			const contactData = { name, email, contact, message, archived: true, timestamp: new Date().toISOString() };
 
 			const contactRef = await db.collection('contactUs').add(contactData);
 			const response = await contactRef.get();
+
+			const mailer = new Mailer();
+			mailer.sendMail(email, `${name} (${contact})`, message);
 
 			res.json({
 				id: contactRef.id,

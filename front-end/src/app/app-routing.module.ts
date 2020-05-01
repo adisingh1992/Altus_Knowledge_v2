@@ -1,3 +1,4 @@
+import { ContactDetailsComponent } from './contact-us/contact-details/contact-details.component';
 import { PaymentStatusComponent } from './payment/payment-status/payment-status.component';
 import { PackagesComponent } from './packages/packages.component';
 import { FaqComponent } from './faq/faq.component';
@@ -49,6 +50,11 @@ const routes: Routes = [
 		path: 'contact',
 		component: ContactUsComponent,
 		data: { title: 'Contact Us: Altus Knowledge' }
+	},
+	{
+		path: 'contact/details',
+		component: ContactDetailsComponent,
+		data: { title: 'Contact Details: Altus Knowledge' }
 	},
 	{
 		path: 'payment',

@@ -7,6 +7,8 @@ export = (express: any) => {
 
 	router.post('/contact-us', MainController.saveContactRequest);
 
+	router.delete('/contact-us/:id', MainController.deleteContact);
+
 	router.get('/packages/:stream', MainController.getAllPackages);
 
 	router.post('/packages/initiate-payment/', MainController.processPaymentRequest);

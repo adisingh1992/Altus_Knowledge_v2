@@ -1,0 +1,24 @@
+<nz-card nzTitle="Contact Details" id="details-card">
+    <div nz-row [nzGutter]="32">
+        <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="12" nzXl="12" class="details-col">
+            <nz-collapse>
+                <nz-collapse-panel *ngFor="let detail of details" [nzHeader]="detail?.data?.name" [nzExtra]="action">
+                    <div>
+                        <strong>{{ detail?.data?.email }}</strong>
+                    </div>
+                    <div>
+                        <strong>{{ detail?.data?.contact }}</strong>
+                    </div>
+                    <p>
+                        {{ detail?.data?.message }}
+                    </p>
+                    <ng-template #action>
+                        <button nz-button nzType="link" (click)="delete(detail?.id)">
+                            <em nz-icon nzType="delete" nzTheme="outline"></em>
+                        </button>
+                    </ng-template>
+                </nz-collapse-panel>
+            </nz-collapse>
+        </div>
+    </div>
+</nz-card>
