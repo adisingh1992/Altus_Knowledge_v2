@@ -11,7 +11,7 @@ const db = firebase.firestore();
 class MainController {
 	async getAllContactRequests(req: any, res: any) {
 		try {
-			const contactRequestsSnapshot = await db.collection('contactUs').get();
+			const contactRequestsSnapshot = await db.collection('contactUs').orderBy("timestamp", "desc").get();
 
 			const contactRequests: Object[] = [];
 
