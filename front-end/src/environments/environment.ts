@@ -7,5 +7,9 @@ export const environment = {
 	// rootUrl: 'http://localhost:5000/api/v1',
 	payUBizURL: 'https://test.payu.in/_payment',
 	googleAnalyticsKey: 'UA-51026780-6',
+	elasticEmail: 'adi.singh1992@gmail.com',
+	elasticPassword: 'F84213CA2B1C0184FBBAD9CAEFED429CA104',
+	elasticSMTP: 'smtp.elasticemail.com',
+	elasticPort: 2525,
 	production: false
 };
