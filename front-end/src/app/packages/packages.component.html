@@ -10,8 +10,12 @@
             </ng-template>
 
             <ng-template #description>
+                <span nz-text nzType="danger" *ngIf="package?.data?.name === 'Supreme Program'">
+                    &#8377; <s>50,000</s>
+                </span>
+
                 <span nz-text nzType="warning">
-                    &#8377; {{package?.data?.price}}
+                    &nbsp;&#8377; {{package?.data?.price}}
                 </span>
             </ng-template>
 
