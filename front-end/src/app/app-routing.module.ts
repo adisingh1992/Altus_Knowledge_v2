@@ -1,3 +1,5 @@
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
 import { ContactDetailsComponent } from './contact-us/contact-details/contact-details.component';
 import { PaymentStatusComponent } from './payment/payment-status/payment-status.component';
 import { PackagesComponent } from './packages/packages.component';
@@ -60,6 +62,16 @@ const routes: Routes = [
 		path: 'payment',
 		component: PaymentStatusComponent,
 		data: { title: 'Payment Status: Altus Knowledge' }
+	},
+	{
+		path: 'terms-and-conditions',
+		component: TermsAndConditionsComponent,
+		data: { title: 'Terms and Conditions' }
+	},
+	{
+		path: 'privacy-policy',
+		component: PrivacyPolicyComponent,
+		data: { title: 'Privacy Policy' }
 	}
 ];
 

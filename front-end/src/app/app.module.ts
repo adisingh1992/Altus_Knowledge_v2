@@ -25,6 +25,8 @@ import { PackagesComponent } from './packages/packages.component';
 import { PaymentFormComponent } from './payment/payment-form/payment-form.component';
 import { PaymentStatusComponent } from './payment/payment-status/payment-status.component';
 import { ContactDetailsComponent } from './contact-us/contact-details/contact-details.component';
+import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 registerLocaleData(en);
 
@@ -45,7 +47,9 @@ registerLocaleData(en);
 		PackagesComponent,
 		PaymentFormComponent,
 		PaymentStatusComponent,
-		ContactDetailsComponent
+		ContactDetailsComponent,
+		TermsAndConditionsComponent,
+		PrivacyPolicyComponent
 	],
 	imports: [
 		BrowserModule,
