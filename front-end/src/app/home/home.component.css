@@ -19,3 +19,17 @@
 		height: 50vh;
 	}
 }
+
+::ng-deep .vertical-center-modal {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+::ng-deep .vertical-center-modal .ant-modal {
+	top: 0;
+}
+
+::ng-deep .modal-class {
+	width: 75% !important;
+}

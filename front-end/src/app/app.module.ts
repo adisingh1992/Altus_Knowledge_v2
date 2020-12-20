@@ -27,6 +27,7 @@ import { PaymentStatusComponent } from './payment/payment-status/payment-status.
 import { ContactDetailsComponent } from './contact-us/contact-details/contact-details.component';
 import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { AdmissionPopupComponent } from './shared/admission-popup/admission-popup.component';
 
 registerLocaleData(en);
 
@@ -49,7 +50,8 @@ registerLocaleData(en);
 		PaymentStatusComponent,
 		ContactDetailsComponent,
 		TermsAndConditionsComponent,
-		PrivacyPolicyComponent
+		PrivacyPolicyComponent,
+		AdmissionPopupComponent
 	],
 	imports: [
 		BrowserModule,
@@ -66,7 +68,7 @@ registerLocaleData(en);
 		{ provide: NZ_I18N, useValue: en_US },
 		{ provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true }
 	],
-	entryComponents: [ PaymentFormComponent ],
+	entryComponents: [ PaymentFormComponent, AdmissionPopupComponent ],
 	bootstrap: [ AppComponent ]
 })
 export class AppModule {}
